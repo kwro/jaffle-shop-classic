@@ -1,5 +1,20 @@
 version: 2
 
+sources:
+  - name: payment
+    schema: stripe
+    tables:
+    - name: payment
+      columns:
+        - name: id
+        - name: ORDERID
+        - name: PAYMENTMETHOD
+        - name: STATUS
+        - name: amount
+        - name: CREATED
+        - name: _BATCHED_AT
+
+
 models:
   - name: customers
     description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
@@ -80,3 +95,6 @@ models:
         description: Amount of the order (AUD) paid for by gift card
         tests:
           - not_null
+
+
+  

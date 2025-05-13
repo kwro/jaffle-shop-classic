@@ -24,3 +24,13 @@ models:
       materialized: table
       staging:
         materialized: view
+
+seeds:
+  jaffle_shop:
+  raw_customers:
+    header: true
+    quote_columns: true
+  raw_orders:
+    header: true
+  raw_payments:
+    header: true
